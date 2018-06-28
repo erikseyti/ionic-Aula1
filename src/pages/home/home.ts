@@ -12,8 +12,13 @@ export class HomePage {
   constructor(public navCtrl: NavController, private alertCtrl:AlertController) {
   }
 
+  converterNumber(numero):number
+  {
+    return parseFloat(numero);
+  }
+
   calcularImc(){
-    this.imc.resultado = parseFloat(this.imc.peso)/Math.pow(parseFloat(this.imc.altura),2);
+    this.imc.resultado = this.imc.peso/Math.pow(this.imc.altura,2);
     this.listaImc.push(this.imc);
     this.imc = {peso:"", altura:"", nome:"", resultado:""};
   }

@@ -15,12 +15,12 @@
 
     <ion-item>
       <ion-label floating>Altura (m)</ion-label>
-      <ion-input type="number" [(ngModel)]="imc.altura">></ion-input>
+      <ion-input type="number" (ngModelChange)="imc.altura = converterNumber($event)" [(ngModel)]="imc.altura">></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label floating>Peso (kg)</ion-label>
-      <ion-input type="Number" [(ngModel)]="imc.peso">></ion-input>
+      <ion-input type="Number" (ngModelChange)="imc.peso = converterNumber($event)" [(ngModel)]="imc.peso">></ion-input>
     </ion-item>
   </ion-list>
 
